@@ -1,9 +1,9 @@
 #!/usr/bin/env python3
 """Task 102 adv"""
-from typing import List, Tuple
+from typing import List
 
 
-def zoom_array(lst: Tuple, factor: int = 2) -> List:
+def zoom_array(lst: List, factor: int = 2) -> List:
 """Task 102 adv"""
     zoomed_in: List = [
         item for item in lst
@@ -16,4 +16,4 @@ array = (12, 72, 91)
 
 zoom_2x = zoom_array(array)
 
-zoom_3x = zoom_array(array, 3.0)
+zoom_3x = zoom_array(array, 3)
