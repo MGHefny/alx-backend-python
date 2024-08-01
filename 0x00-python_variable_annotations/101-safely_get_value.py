@@ -3,9 +3,9 @@
 from typing import Any, Mapping, Union, TypeVar
 
 
-x = TypeVar("x")
-y = Union[Any, x]
-z = Union[x, None]
+T = TypeVar("T")
+y = Union[Any, T]
+z = Union[T, None]
 
 
 def safely_get_value(dct: Mapping, key: Any, default: z = None) -> y:
