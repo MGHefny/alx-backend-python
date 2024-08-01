@@ -1,11 +1,11 @@
 #!/usr/bin/env python3
 """Task 102 adv"""
-from typing import List, Tuple
+from typing import Tuple
 
 
-def zoom_array(lst: Tuple, factor: int = 2) -> List:
+def zoom_array(lst: Tuple, factor: int = 2) -> Tuple:
     """multiple copies items tuple"""
-        zoomed_in: List = [
+        zoomed_in: Tuple = [
         item for item in lst
         for i in range(int(factor))
     ]
@@ -16,4 +16,4 @@ array = (12, 72, 91)
 
 zoom_2x = zoom_array(array)
 
-zoom_3x = zoom_array(array, 3)
+zoom_3x = zoom_array(array, 3.0)
