@@ -2,6 +2,7 @@
 """ test utils """
 
 import unittest
+from unittest.mock import patch, Mock
 from parameterized import parameterized
 from utils import access_nested_map, get_json, memoize
 
@@ -33,7 +34,7 @@ class TestAccessNestedMap(unittest.TestCase):
 
 class TestGetJson(unittest.TestCase):
     """ test get json"""
-    
+
     @parameterized.expand(
         [
             ("http://example.com", {"payload": True}),
