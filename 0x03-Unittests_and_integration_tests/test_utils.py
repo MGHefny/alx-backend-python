@@ -64,8 +64,8 @@ class TestMemoize(unittest.TestCase):
                 """ a_property function """
                 return self.a_method()
 
+        cl_test = TestClass()
         with patch.object(cl_test, "a_method", return_value=42) as z:
-            cl_test = TestClass()
             z.assert_called_once()
             self.assertEqual(cl_test.a_property(), 42)
             self.assertEqual(cl_test.a_property(), 42)
