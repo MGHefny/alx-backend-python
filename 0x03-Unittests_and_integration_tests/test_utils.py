@@ -63,6 +63,7 @@ class TestMemoize(unittest.TestCase):
             def a_property(self):
                 """ a_property function """
                 return self.a_method()
+
         with patch.object(cl_test, "a_method", return_value=42) as z:
             cl_test = TestClass()
             self.assertEqual(cl_test.a_property(), 42)
