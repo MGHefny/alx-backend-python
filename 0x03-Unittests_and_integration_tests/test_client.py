@@ -43,8 +43,8 @@ class TestGithubOrgClient(unittest.TestCase):
                    the_call=PropertyMock) as mock_p:
 
             mock_p.return_value = "welcome"
-            test_class = GithubOrgClient('check')
-            output = test_class.public_repos()
+            cl_test = GithubOrgClient('check')
+            output = cl_test.public_repos()
 
             re_check = [x["name"] for x in pay_load_j]
             self.assertEqual(output, re_check)
