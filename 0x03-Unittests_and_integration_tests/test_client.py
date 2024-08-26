@@ -1,10 +1,12 @@
 #!/usr/bin/env python3
 """ task test client """
 
-import unittest
-from unittest.mock import patch, PropertyMock
-from parameterized import parameterized, parameterized_class
 from client import GithubOrgClient
+from fixtures import TEST_PAYLOAD
+from parameterized import parameterized, parameterized_class
+import json
+import unittest
+from unittest.mock import patch, PropertyMock, Mock
 
 
 class TestGithubOrgClient(unittest.TestCase):
