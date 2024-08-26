@@ -36,7 +36,7 @@ class TestGithubOrgClient(unittest.TestCase):
     def test_public_repos(self, mock_g):
         """ check list of repo
         check mocked get jison """
-        pay_load_j = [{"name": "Google"}, {"name": "Yahoo"}]
+        pay_load_j = [{'name': 'Google'}, {'name': 'Yahoo'}]
         mock_g.return_value = pay_load_j
 
         with patch('client.GithubOrgClient._public_repos_url',
