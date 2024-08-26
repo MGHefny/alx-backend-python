@@ -2,7 +2,7 @@
 """ task test client """
 
 import unittest
-from unittest.get_mock import patch
+from unittest.mock import patch
 from parameterized import parameterized
 from client import GithubOrgClient
 
