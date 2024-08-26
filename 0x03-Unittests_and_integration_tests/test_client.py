@@ -12,7 +12,7 @@ class TestGithubOrgClient(unittest.TestCase):
 
     @parameterized.expand([
         ('google',),
-        ('abc'),
+        ('abc')
     ])
     @patch('client.get_json')
     def test_org(self, data_in, mock_g):
