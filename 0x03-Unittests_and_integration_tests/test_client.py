@@ -8,15 +8,15 @@ from client import GithubOrgClient
 
 
 class TestGithubOrgClient(unittest.TestCase):
-    """cls test git hub org"""
+    """ cls test git hub org """
 
     @parameterized.expand([
         ("google", {'login': "google"}),
         ("abc", {'login': "abc"}),
     ])
     @patch("client.get_json")
-    def test_org(self, data_in, get_mock):
-        """correct result from test"""
+    def test_org(self, data_in, mock_g):
+        """ correct result from test """
         cl_test = GithubOrgClient(data_in)
         cl_test.org()
         the_url = f"https://api.github.com/orgs/{org_name}"
