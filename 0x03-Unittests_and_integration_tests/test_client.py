@@ -1,12 +1,10 @@
 #!/usr/bin/env python3
 """ task test client """
 
-from client import GithubOrgClient
-from fixtures import TEST_PAYLOAD
-from parameterized import parameterized, parameterized_class
-import json
 import unittest
-from unittest.mock import patch, PropertyMock, Mock
+from unittest.mock import patch, PropertyMock
+from parameterized import parameterized, parameterized_class
+from client import GithubOrgClient
 
 
 class TestGithubOrgClient(unittest.TestCase):
@@ -38,7 +36,7 @@ class TestGithubOrgClient(unittest.TestCase):
     def test_public_repos(self, mock_g):
         """ check list of repo
         check mocked get jison """
-        pay_load_j = [{"name": "Yahoo"}, {"name": "Twitter"}]
+        pay_load_j = [{"name": "Google"}, {"name": "Yahoo"}]
         mock_g.return_value = pay_load_j
 
         with patch('client.GithubOrgClient._public_repos_url',
