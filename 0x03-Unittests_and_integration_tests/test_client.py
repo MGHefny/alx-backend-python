@@ -42,12 +42,12 @@ class TestGithubOrgClient(unittest.TestCase):
         with patch('client.GithubOrgClient._public_repos_url',
                    the_call=PropertyMock) as mock_p:
 
-            mock_p.return_value = "welcome"
+            mock_p.return_value = "mock_url"
             cl_test = GithubOrgClient('check')
             output = cl_test.public_repos()
 
-            """re_check = [i["name"] for i in pay_load_j]
-            self.assertEqual(output, re_check)"""
+            re_check = [i["name"] for i in pay_load_j]
+            self.assertEqual(output, re_check)
 
             mock_g.assert_called_once()
             mock_p.assert_called_once()
