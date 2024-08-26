@@ -20,4 +20,4 @@ class TestGithubOrgClient(unittest.TestCase):
         cl_test = GithubOrgClient(data_in)
         cl_test.org()
         the_url = f"https://api.github.com/orgs/{data_in}"
-        mock_get_json.assert_called_once_with(the_url)
+        mock_g.assert_called_once_with(the_url)
