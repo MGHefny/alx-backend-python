@@ -49,8 +49,8 @@ class TestGithubOrgClient(unittest.TestCase):
             re_check = [x["name"] for x in pay_load_j]
             self.assertEqual(output, re_check)
 
-            mock_p.assert_called_once()
             mock_g.assert_called_once()
+            mock_p.assert_called_once()
 
     @parameterized.expand([
         ({"license": {"key": "my_license"}}, "my_license", True),
